@@ -16,8 +16,8 @@ frontend oreste-frontend
         default_backend oreste-backend
 backend oreste-backend
         balance roundrobin
-        server 6231-web-01 18.234.84.75 check
-        server 6231-web-02 3.95.57.8 check
+        server 6231-web-01 18.234.84.75:80 check
+        server 6231-web-02 3.95.57.8:80 check
 "
 echo "$server_config" | sudo tee -a /etc/haproxy/haproxy.cfg
 
