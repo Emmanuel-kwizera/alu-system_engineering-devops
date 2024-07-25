@@ -13,7 +13,7 @@ server_config=\
 frontend emmanuel-frontend
         bind *:80
         mode http
-        default_backend oreste-backend
+        default_backend emmanuel-backend
 backend emmanuel-backend
         balance roundrobin
         server 6231-web-01 18.234.84.75:80 check
